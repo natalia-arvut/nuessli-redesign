@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Nüssli AG Agasul – Carreisen · Kran · Transporte · Werkstatt</title>
 <meta name="description" content="Nüssli AG Agasul – Familienbetrieb seit 1962. Carreisen, Kranarbeiten, Transporte und Werkstatt im Zürcher Oberland." />
-<link rel="icon" type="image/png" href="images/favicon_pink.png" />
+<link rel="icon" type="image/png" href="images/favicon_red.png" />
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@ tailwind.config = {
       colors: {
         navy:  { DEFAULT:'#0e2148', 700:'#16306b', 600:'#1b3a7e', 500:'#2b5cb0' },
         steel: '#2f6fd0',
-        signal:{ DEFAULT:'#d6189e', 600:'#b01280' },
+        signal:{ DEFAULT:'#d62828', 600:'#b81e1e' },
         ink:   '#0c1424',
         mist:  '#f4f6fb',
       },
@@ -35,7 +35,7 @@ tailwind.config = {
   h1,h2,h3,.font-head{font-family:'Oswald',sans-serif}
   .eyebrow{font-family:'Oswald',sans-serif;letter-spacing:.28em;text-transform:uppercase;font-weight:600}
   /* hazard stripe */
-  .hazard{background:repeating-linear-gradient(135deg,#d6189e 0 14px,#0e2148 14px 28px)}
+  .hazard{background:repeating-linear-gradient(135deg,#d62828 0 14px,#0e2148 14px 28px)}
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
   .card-img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
@@ -79,7 +79,7 @@ tailwind.config = {
 <header id="top" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between">
     <a href="#top" class="flex items-center">
-      <img src="images/logo.jpg" alt="Nüssli AG Carreisen und Transporte" class="h-12 w-auto" />
+      <img src="images/logo_trans.png" alt="Nüssli AG Carreisen und Transporte" class="h-12 w-auto" />
     </a>
     <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-navy">
       <a href="https://nuessli-agasul.ch/index.php/carreisen/carreisen" target="_blank" rel="noopener" class="hover:text-signal transition-colors">Carreisen</a>
@@ -97,19 +97,19 @@ tailwind.config = {
 <!-- Hero -->
 <section class="relative min-h-[88vh] flex items-center overflow-hidden">
   <img src="images/hero_car.jpg" alt="Nüssli Reisecar in den Schweizer Bergen mit Chalets im Hintergrund" class="absolute inset-0 w-full h-full object-cover" />
-  <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/30"></div>
-  <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/45 to-navy/10"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-transparent"></div>
   <div class="relative max-w-7xl mx-auto px-5 py-24 w-full">
     <div class="max-w-2xl reveal">
-      <div class="flex items-center gap-3 mb-6">
+      <div class="flex items-center gap-3 mb-6 [text-shadow:0_1px_8px_rgba(0,0,0,.6)]">
         <span class="h-[3px] w-12 bg-signal"></span>
         <span class="eyebrow text-signal text-xs">Familienbetrieb seit 1962</span>
       </div>
-      <h1 class="text-white font-700 uppercase leading-[1.15] text-5xl sm:text-6xl lg:text-7xl tracking-tight">
+      <h1 class="text-white font-700 uppercase leading-[1.15] text-5xl sm:text-6xl lg:text-7xl tracking-tight [text-shadow:0_2px_18px_rgba(0,0,0,.55)]">
         <span class="block">Willkommen bei der</span>
         <span class="block text-steel mt-1">Firma Nüssli AG Agasul</span>
       </h1>
-      <p class="mt-7 text-lg text-white/80 max-w-xl font-light leading-relaxed">
+      <p class="mt-7 text-lg text-white/90 max-w-xl font-light leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,.6)]">
         Carreisen · Kranarbeiten · Transporte · Werkstatt – aus einer Hand. Ein reiner Familienbetrieb mit persönlichem Kundenkontakt im Zürcher Oberland.
       </p>
       <div class="mt-9 flex flex-wrap gap-4">
