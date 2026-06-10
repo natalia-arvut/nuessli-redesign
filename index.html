@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nüssli AG Agasul – Carreisen · Kran · Transporte · Werkstatt</title>
+<meta name="description" content="Nüssli AG Agasul – Familienbetrieb seit 1962. Carreisen, Kranarbeiten, Transporte und Werkstatt im Zürcher Oberland." />
+<link rel="icon" href="images/logo.jpg" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy:  { DEFAULT:'#0e2148', 700:'#16306b', 600:'#1b3a7e', 500:'#2b5cb0' },
+        steel: '#2f6fd0',
+        signal:{ DEFAULT:'#d62828', 600:'#b81e1e' },
+        ink:   '#0c1424',
+        mist:  '#f4f6fb',
+      },
+      fontFamily: {
+        head: ['Oswald','sans-serif'],
+        body: ['Inter','sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:#0c1424;background:#fff}
+  h1,h2,h3,.font-head{font-family:'Oswald',sans-serif}
+  .eyebrow{font-family:'Oswald',sans-serif;letter-spacing:.28em;text-transform:uppercase;font-weight:600}
+  /* hazard stripe */
+  .hazard{background:repeating-linear-gradient(135deg,#d62828 0 14px,#0e2148 14px 28px)}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .card-img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .group:hover .card-img{transform:scale(1.06)}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.card-img{transition:none}}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Top bar -->
+<div class="bg-navy text-white/85 text-[13px]">
+  <div class="max-w-7xl mx-auto px-5 h-10 flex items-center justify-between">
+    <div class="flex items-center gap-5">
+      <a href="tel:0523461415" class="flex items-center gap-2 hover:text-white transition-colors">
+        <svg class="w-3.5 h-3.5 text-signal" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.9 3 3.4 3.4 3 4 3h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+        052 346 14 15
+      </a>
+      <a href="mailto:info@nuessli-carreisen.ch" class="hidden sm:flex items-center gap-2 hover:text-white transition-colors">
+        <svg class="w-3.5 h-3.5 text-signal" fill="currentColor" viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7L4 7v1l8 5 8-5V7l-8 5z"/></svg>
+        info@nuessli-carreisen.ch
+      </a>
+    </div>
+    <div class="hidden md:flex items-center gap-4 text-white/70">
+      <span class="eyebrow text-[10px] tracking-[.2em]">Agasul · Frauenfeld</span>
+      <div class="flex items-center gap-3">
+        <a href="https://www.youtube.com/c/N%C3%BCssliAGCarreisenundTransporteIllnauEffretikon" target="_blank" rel="noopener" class="hover:text-white transition-colors" aria-label="YouTube">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23 12s0-3.3-.4-4.8a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.4a2.5 2.5 0 0 0-1.8 1.8C1 8.7 1 12 1 12s0 3.3.4 4.8a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.4a2.5 2.5 0 0 0 1.8-1.8C23 15.3 23 12 23 12zM9.8 15V9l5.2 3-5.2 3z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/nuessli-ag" target="_blank" rel="noopener" class="hover:text-white transition-colors" aria-label="LinkedIn">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0V8zm7.5 0H12v2.2h.1c.6-1.1 2.2-2.3 4.5-2.3 4.8 0 5.7 3.2 5.7 7.3V24h-5v-7c0-1.7 0-3.8-2.3-3.8s-2.7 1.8-2.7 3.7V24h-5V8z"/></svg>
+        </a>
+        <a href="http://facebook.com/nuesslicarreisen" target="_blank" rel="noopener" class="hover:text-white transition-colors" aria-label="Facebook">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header id="top" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between">
+    <a href="#top" class="flex items-center">
+      <img src="images/logo.jpg" alt="Nüssli AG Carreisen und Transporte" class="h-11 w-auto" />
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-navy">
+      <a href="#carreisen" class="hover:text-signal transition-colors">Carreisen</a>
+      <a href="#kran" class="hover:text-signal transition-colors">Kran</a>
+      <a href="#transporte" class="hover:text-signal transition-colors">Transporte</a>
+      <a href="#werkstatt" class="hover:text-signal transition-colors">Werkstatt</a>
+      <a href="#ueber-uns" class="hover:text-signal transition-colors">Über uns</a>
+    </nav>
+    <a href="#kontakt" class="inline-flex items-center gap-2 bg-signal hover:bg-signal-600 text-white font-head font-600 uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm transition-colors">
+      Kontakt
+    </a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative min-h-[88vh] flex items-center overflow-hidden">
+  <img src="images/transport.jpg" alt="Schwertransport mit Scania und Kobelco-Bagger" class="absolute inset-0 w-full h-full object-cover" />
+  <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/30"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-24 w-full">
+    <div class="max-w-2xl reveal">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="h-[3px] w-12 bg-signal"></span>
+        <span class="eyebrow text-signal text-xs">Familienbetrieb seit 1962</span>
+      </div>
+      <h1 class="text-white font-700 uppercase leading-[0.95] text-5xl sm:text-6xl lg:text-7xl tracking-tight">
+        Willkommen bei der<br><span class="text-steel">Firma Nüssli AG</span> Agasul
+      </h1>
+      <p class="mt-7 text-lg text-white/80 max-w-xl font-light leading-relaxed">
+        Carreisen · Kranarbeiten · Transporte · Werkstatt – aus einer Hand. Ein reiner Familienbetrieb mit persönlichem Kundenkontakt im Zürcher Oberland.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="#bereiche" class="inline-flex items-center gap-2 bg-signal hover:bg-signal-600 text-white font-head font-600 uppercase tracking-wider px-7 py-3.5 rounded-sm transition-colors">
+          Unsere Geschäftsbereiche
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="tel:0523461415" class="inline-flex items-center gap-2 border border-white/40 hover:border-white text-white font-head font-500 uppercase tracking-wider px-7 py-3.5 rounded-sm transition-colors">
+          052 346 14 15
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-0 inset-x-0 h-2 hazard opacity-90"></div>
+</section>
+
+<!-- Stats -->
+<section class="bg-navy text-white">
+  <div class="max-w-7xl mx-auto px-5 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
+    <div class="py-10 px-6 text-center reveal">
+      <div class="font-head font-700 text-5xl text-steel">1962</div>
+      <div class="mt-2 text-sm text-white/70 uppercase tracking-wider">Familienbetrieb seit</div>
+    </div>
+    <div class="py-10 px-6 text-center reveal">
+      <div class="font-head font-700 text-5xl text-steel">37<span class="text-2xl align-top">m</span></div>
+      <div class="mt-2 text-sm text-white/70 uppercase tracking-wider">Kranarbeiten bis</div>
+    </div>
+    <div class="py-10 px-6 text-center reveal">
+      <div class="font-head font-700 text-5xl text-steel">22<span class="text-2xl align-top">t</span></div>
+      <div class="mt-2 text-sm text-white/70 uppercase tracking-wider">Hebegewicht bis</div>
+    </div>
+    <div class="py-10 px-6 text-center reveal">
+      <div class="font-head font-700 text-5xl text-steel">8</div>
+      <div class="mt-2 text-sm text-white/70 uppercase tracking-wider">Cars & Kleinbusse</div>
+    </div>
+  </div>
+</section>
+
+<!-- Geschäftsbereiche -->
+<section id="bereiche" class="py-24 bg-mist">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="max-w-2xl mb-14 reveal">
+      <span class="eyebrow text-signal text-xs">Vier Geschäftsbereiche</span>
+      <h2 class="mt-4 text-navy font-600 text-4xl sm:text-5xl uppercase leading-tight">Alles aus einer Hand</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-7">
+      <!-- Carreisen -->
+      <a href="#carreisen" class="group block bg-white rounded-md overflow-hidden shadow-sm hover:shadow-xl transition-shadow reveal">
+        <div class="relative h-60 overflow-hidden">
+          <img src="images/car.jpg" alt="Reisecar Setra im Wallis" class="card-img absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent"></div>
+          <span class="absolute left-5 bottom-4 text-white font-head font-600 text-2xl uppercase tracking-wide">Carreisen</span>
+        </div>
+        <div class="p-6">
+          <p class="text-slate-600 text-[15px] leading-relaxed">Moderne Reisecars für Firmen-, Vereins- und Schulausflüge, Hochzeiten und Familienanlässe.</p>
+          <span class="mt-4 inline-flex items-center gap-2 text-signal font-head font-600 uppercase text-sm tracking-wider">Mehr erfahren <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <!-- Kran -->
+      <a href="#kran" class="group block bg-white rounded-md overflow-hidden shadow-sm hover:shadow-xl transition-shadow reveal">
+        <div class="relative h-60 overflow-hidden">
+          <img src="images/kran.jpg" alt="Scania LKW-Kran" class="card-img absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent"></div>
+          <span class="absolute left-5 bottom-4 text-white font-head font-600 text-2xl uppercase tracking-wide">Kranarbeiten</span>
+        </div>
+        <div class="p-6">
+          <p class="text-slate-600 text-[15px] leading-relaxed">LKW-Krane für jede Hebe- oder Transportaufgabe – bis 37 Meter und bis 22 Tonnen.</p>
+          <span class="mt-4 inline-flex items-center gap-2 text-signal font-head font-600 uppercase text-sm tracking-wider">Mehr erfahren <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <!-- Transporte -->
+      <a href="#transporte" class="group block bg-white rounded-md overflow-hidden shadow-sm hover:shadow-xl transition-shadow reveal">
+        <div class="relative h-60 overflow-hidden">
+          <img src="images/transport.jpg" alt="Schwertransport mit Scania" class="card-img absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent"></div>
+          <span class="absolute left-5 bottom-4 text-white font-head font-600 text-2xl uppercase tracking-wide">Transporte</span>
+        </div>
+        <div class="p-6">
+          <p class="text-slate-600 text-[15px] leading-relaxed">Spezial- und Schwertransporte, Baumaschinen- und Baustellentransporte mit Sattel- und Anhängerzug.</p>
+          <span class="mt-4 inline-flex items-center gap-2 text-signal font-head font-600 uppercase text-sm tracking-wider">Mehr erfahren <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Carreisen detail -->
+<section id="carreisen" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="reveal">
+      <img src="images/car.jpg" alt="Reisecar Setra S511 im Wallis" class="rounded-md shadow-lg w-full object-cover" />
+    </div>
+    <div class="reveal">
+      <span class="eyebrow text-signal text-xs">Carreisen</span>
+      <h2 class="mt-4 text-navy font-600 text-4xl uppercase leading-tight">Ihr Partner für unvergessliche Fahrten</h2>
+      <p class="mt-6 text-slate-600 leading-relaxed text-[17px]">Mit unseren modernen Reisecars sind wir Ihr Partner, wenn es um Firmen-, Vereins- und Schulausflüge, Hochzeiten und Familienanlässe geht. Alle Fahrzeuge sind mit Klimaanlage, Toilette, Radio/CD/DVD und Kühlschrank ausgerüstet.</p>
+      <h3 class="mt-8 mb-4 text-navy font-600 uppercase tracking-wide text-lg">Zu unserer Flotte gehören</h3>
+      <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-slate-700 text-[15px]">
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-signal rounded-full"></span>ein 81-Plätzer Car</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-signal rounded-full"></span>ein 51-Plätzer Car</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-signal rounded-full"></span>ein 46-Plätzer Car</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-signal rounded-full"></span>ein 41-Plätzer Car</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-signal rounded-full"></span>ein 40-Plätzer Car</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-signal rounded-full"></span>ein 38-Plätzer Car</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-signal rounded-full"></span>ein 20-Plätzer Kleinbus</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-signal rounded-full"></span>ein 19-Plätzer Kleinbus</li>
+      </ul>
+      <p class="mt-5 text-slate-500 text-[15px] italic">Der 19-Plätzer Kleinbus eignet sich ideal für kleine Reisegesellschaften und Gruppen oder als Ergänzung zu einem unserer grossen Reisecars.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Kran detail -->
+<section id="kran" class="py-24 bg-navy text-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="reveal order-2 lg:order-1">
+      <span class="eyebrow text-signal text-xs">LKW-Krane</span>
+      <h2 class="mt-4 font-600 text-4xl uppercase leading-tight">Der ideale Partner für jede Hebeaufgabe</h2>
+      <p class="mt-6 text-white/80 leading-relaxed text-[17px]">Mit unseren LKW-Kranfahrzeugen sind wir der ideale Partner für ihre Hebe- oder Transportaufgabe. Wir erledigen Kranarbeiten bis maximal 37 Meter und können Gewichte bis 22 Tonnen anheben. Die maximale Arbeitshöhe liegt bei 35 Metern. Unser 5-Achs-Kran verfügt über eine Seilwinde, welche bis zu einer Reichweite von 32 m eingesetzt werden kann.</p>
+      <h3 class="mt-8 mb-4 font-600 uppercase tracking-wide text-lg text-steel">Zusatzausrüstung</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="border border-white/20 px-3 py-1.5 rounded-sm text-sm text-white/80">Fly-Jib/Zusatzknick</span>
+        <span class="border border-white/20 px-3 py-1.5 rounded-sm text-sm text-white/80">Schalengreifer in mehreren Grössen</span>
+        <span class="border border-white/20 px-3 py-1.5 rounded-sm text-sm text-white/80">Stein-/Holz-/Spinnengreifer</span>
+        <span class="border border-white/20 px-3 py-1.5 rounded-sm text-sm text-white/80">Palletgabel</span>
+        <span class="border border-white/20 px-3 py-1.5 rounded-sm text-sm text-white/80">Betonkübel</span>
+      </div>
+      <a href="https://nuessli-agasul.ch/images/spezialtransporte/technischer_Katalog_Nuessli_AG_2024.pdf" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 bg-signal hover:bg-signal-600 text-white font-head font-600 uppercase tracking-wider text-sm px-6 py-3 rounded-sm transition-colors">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm8 1.5V8h4.5L14 3.5z"/></svg>
+        Technischer Katalog
+      </a>
+    </div>
+    <div class="reveal order-1 lg:order-2">
+      <img src="images/kran.jpg" alt="Scania LKW-Kran im Einsatz" class="rounded-md shadow-2xl w-full object-cover" />
+      <div class="mt-5 grid grid-cols-2 gap-4">
+        <div class="bg-white/5 border border-white/10 rounded-sm p-4">
+          <div class="font-head font-700 text-3xl text-steel">35 m</div>
+          <div class="text-sm text-white/60 mt-1">Maximale Arbeitshöhe</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-sm p-4">
+          <div class="font-head font-700 text-3xl text-steel">32 m</div>
+          <div class="text-sm text-white/60 mt-1">Reichweite Seilwinde</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Transporte detail -->
+<section id="transporte" class="py-24 bg-mist">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="max-w-2xl mb-12 reveal">
+      <span class="eyebrow text-signal text-xs">Transporte</span>
+      <h2 class="mt-4 text-navy font-600 text-4xl sm:text-5xl uppercase leading-tight">Spezial- und Schwertransporte</h2>
+      <p class="mt-5 text-slate-600 text-[17px] leading-relaxed">Diverse Transporte mit Sattelzug und Anhängerzug – vom Baumaschinentaxi bis zum Schwertransport.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-white rounded-md p-6 shadow-sm hover:shadow-lg transition-shadow reveal">
+        <h3 class="font-head font-600 uppercase text-navy text-lg tracking-wide">Spezialtransporte</h3>
+        <ul class="mt-4 space-y-2 text-slate-600 text-[15px]">
+          <li>Schwertransporte</li>
+          <li>Baumaschinentransporte</li>
+          <li>Baumaschinentaxi</li>
+          <li>Landmaschinentransporte</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-md p-6 shadow-sm hover:shadow-lg transition-shadow reveal">
+        <h3 class="font-head font-600 uppercase text-navy text-lg tracking-wide">Transporte</h3>
+        <ul class="mt-4 space-y-2 text-slate-600 text-[15px]">
+          <li>Sattelzug</li>
+          <li>Anhängerzug</li>
+          <li>Wechselpritschen</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-md p-6 shadow-sm hover:shadow-lg transition-shadow reveal">
+        <h3 class="font-head font-600 uppercase text-navy text-lg tracking-wide">Baustellentransporte</h3>
+        <ul class="mt-4 space-y-2 text-slate-600 text-[15px]">
+          <li>Kippertransporte</li>
+          <li>Belagtransporte</li>
+          <li>Betontransporte</li>
+        </ul>
+      </div>
+      <div class="bg-navy text-white rounded-md p-6 shadow-sm flex flex-col justify-between reveal">
+        <div>
+          <h3 class="font-head font-600 uppercase text-lg tracking-wide text-steel">Technischer Katalog</h3>
+          <p class="mt-3 text-white/70 text-[15px]">Kranarbeiten und Spezialtransporte – alle Daten und Traglastdiagramme.</p>
+        </div>
+        <a href="https://nuessli-agasul.ch/images/spezialtransporte/technischer_Katalog_Nuessli_AG_2024.pdf" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-2 text-signal font-head font-600 uppercase text-sm tracking-wider hover:gap-3 transition-all">
+          PDF öffnen
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Werkstatt -->
+<section id="werkstatt" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14">
+    <div class="reveal">
+      <span class="eyebrow text-signal text-xs">Werkstatt</span>
+      <h2 class="mt-4 text-navy font-600 text-4xl uppercase leading-tight">Der älteste Unternehmensteil</h2>
+      <p class="mt-6 text-slate-600 leading-relaxed text-[17px]">Unser Werkstattbetrieb besteht seit 1962 und ist somit der älteste Unternehmensteil. Nebst der Reparatur und dem Neu- und Umbau unserer eigenen Flotte ist unsere Werkstatt auf Reparaturen an Nutzfahrzeugen ausgerichtet. Nebst moderen Fahrzeugen sind wir auf die Reperatur von Oldtimern der Marken FBW und Saurer spezialisiert und können durch unser eigenes Lager sowie mit Hilfe von vielen Kontakten noch zahlreiche Ersatzteile für diese Fahrzeuge anbieten.</p>
+      <ul class="mt-7 space-y-3">
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-1.5 w-2 h-2 bg-signal rounded-full shrink-0"></span>Reparatur von Nutzfahrzeugen und Oldtimer</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-1.5 w-2 h-2 bg-signal rounded-full shrink-0"></span>Abgaswartung an Dieselfahrzeugen</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-1.5 w-2 h-2 bg-signal rounded-full shrink-0"></span>MFK-Bereitstellung</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-1.5 w-2 h-2 bg-signal rounded-full shrink-0"></span>Bremsprüfung auf eigenem Prüfstand</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-1.5 w-2 h-2 bg-signal rounded-full shrink-0"></span>Gelenkspieltest auf eigenem Prüfstand</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <div class="bg-mist rounded-md p-8 h-full flex flex-col justify-center border-l-4 border-signal">
+        <h3 class="font-head font-600 uppercase text-navy text-2xl tracking-wide">Tankstelle</h3>
+        <p class="mt-5 text-slate-600 leading-relaxed text-[16px]">An unserem Standort in Agasul betreiben wir eine unabhängige Tankstalle mit der Sorte Diesel. Unsere Tankstelle bietet speziell für grosse Fahrzeuge aus dem Transportwesen und der Landwirtschaft eine gute Zufahrt.</p>
+        <p class="mt-4 text-slate-600 leading-relaxed text-[16px]">Während den Büroöffnungszeiten ist die Tankstelle bedient und über ein Kundesystem kann auf Rechnung jederzeit getankt werden.</p>
+        <div class="mt-7 pt-6 border-t border-slate-300">
+          <div class="eyebrow text-navy text-[11px] mb-3">Kundenfahrzeuge</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-white px-3 py-1.5 rounded-sm text-sm text-slate-700 shadow-sm">Lastwagen</span>
+            <span class="bg-white px-3 py-1.5 rounded-sm text-sm text-slate-700 shadow-sm">Oldtimer</span>
+            <span class="bg-white px-3 py-1.5 rounded-sm text-sm text-slate-700 shadow-sm">Autos</span>
+            <span class="bg-white px-3 py-1.5 rounded-sm text-sm text-slate-700 shadow-sm">Landmaschinen</span>
+            <span class="bg-white px-3 py-1.5 rounded-sm text-sm text-slate-700 shadow-sm">Aggregate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Über uns -->
+<section id="ueber-uns" class="relative py-28 overflow-hidden">
+  <img src="images/car.jpg" alt="" class="absolute inset-0 w-full h-full object-cover scale-105 blur-[2px]" aria-hidden="true" />
+  <div class="absolute inset-0 bg-navy/95"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/80 to-navy"></div>
+  <div class="relative max-w-4xl mx-auto px-5 text-center text-white reveal">
+    <span class="eyebrow text-signal text-xs">Über uns</span>
+    <h2 class="mt-5 font-600 text-4xl sm:text-5xl uppercase leading-tight">In dritter Generation</h2>
+    <p class="mt-8 text-white/85 text-lg leading-relaxed">Die Firma Nüssli wurde im Jahre 1962 durch Edwin Nüssli sen. als reiner Garagenbetrieb in Agasul gegründet. Bald wurde das Angebot um Transporte erweitert und das Unternehmen durch stetigen Wachstum vergrössert. Mit dem Kauf des ersten Reisecars wurde ein dritter Geschäftsbereich gegründet und die Firma in eine Aktiengesellschaft umgewandelt.</p>
+    <p class="mt-5 text-white/85 text-lg leading-relaxed">Heute führt Edwin Nüssli jun. zusammen mit seiner Frau Doris Nüssli das Unternehmen in zweiter Generation, aber auch die dritte Generation ist bereits im Unternehmen aktiv. Bis heute ist die Firma Nüssli ein reiner Familienbetrieb geblieben, was uns einen persönlichen Kundenkontakt und eine einfache Zusammenarbeit ermöglicht.</p>
+  </div>
+</section>
+
+<!-- Kontakt -->
+<section id="kontakt" class="py-24 bg-mist">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="max-w-2xl mb-12 reveal">
+      <span class="eyebrow text-signal text-xs">Kontakt</span>
+      <h2 class="mt-4 text-navy font-600 text-4xl sm:text-5xl uppercase leading-tight">Wir sind für Sie da</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-7">
+      <div class="bg-white rounded-md p-8 shadow-sm reveal">
+        <h3 class="font-head font-600 uppercase text-navy text-xl tracking-wide">Carreisen</h3>
+        <div class="mt-5 space-y-4 text-slate-600 text-[15px]">
+          <div>
+            <div class="font-semibold text-navy">Nüssli AG</div>
+            <div>Brauistrasse 5a, 8308 Agasul</div>
+          </div>
+          <div>
+            <div class="font-semibold text-navy">Nüssli Ostschweiz AG</div>
+            <div>Lachenstrasse 5a, 8500 Frauenfeld</div>
+          </div>
+          <div class="pt-3 border-t border-slate-200 space-y-1">
+            <div>Telefon <a href="tel:0523461415" class="text-signal font-medium hover:underline">052 346 14 15</a></div>
+            <div>Fax 052 346 15 64</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-md p-8 shadow-sm reveal">
+        <h3 class="font-head font-600 uppercase text-navy text-xl tracking-wide">Kranarbeiten / Transporte</h3>
+        <div class="mt-5 space-y-4 text-slate-600 text-[15px]">
+          <div>
+            <div class="font-semibold text-navy">Nüssli AG</div>
+            <div>Brauistrasse 5a, 8308 Agasul</div>
+          </div>
+          <div>
+            <div class="font-semibold text-navy">Nüssli Ostschweiz AG</div>
+            <div>Lachenstrasse 5a, 8500 Frauenfeld</div>
+          </div>
+          <div class="pt-3 border-t border-slate-200 space-y-1">
+            <div>Telefon <a href="tel:0799062744" class="text-signal font-medium hover:underline">079 906 27 44</a></div>
+            <div>Fax 052 346 15 64</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-7 bg-navy rounded-md p-8 flex flex-col sm:flex-row items-center justify-between gap-5 reveal">
+      <div class="text-white">
+        <div class="font-head font-600 uppercase text-xl tracking-wide">Schreiben Sie uns</div>
+        <a href="mailto:info@nuessli-carreisen.ch" class="text-steel text-lg hover:underline">info@nuessli-carreisen.ch</a>
+      </div>
+      <a href="mailto:info@nuessli-carreisen.ch" class="inline-flex items-center gap-2 bg-signal hover:bg-signal-600 text-white font-head font-600 uppercase tracking-wider px-7 py-3.5 rounded-sm transition-colors">
+        E-Mail senden
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="h-2 hazard"></div>
+
+<!-- Footer -->
+<footer class="bg-ink text-white/70">
+  <div class="max-w-7xl mx-auto px-5 py-14">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+      <div>
+        <img src="images/logo.jpg" alt="Nüssli AG" class="h-10 w-auto bg-white rounded-sm p-1.5" />
+        <p class="mt-4 text-sm max-w-md leading-relaxed">Familienbetrieb seit 1962 – Carreisen, Kranarbeiten, Transporte und Werkstatt aus einer Hand.</p>
+      </div>
+      <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm">
+        <a href="#carreisen" class="hover:text-white transition-colors">Carreisen</a>
+        <a href="#kran" class="hover:text-white transition-colors">Kran</a>
+        <a href="#transporte" class="hover:text-white transition-colors">Transporte</a>
+        <a href="#werkstatt" class="hover:text-white transition-colors">Werkstatt</a>
+        <a href="#ueber-uns" class="hover:text-white transition-colors">Über uns</a>
+        <a href="#kontakt" class="hover:text-white transition-colors">Kontakt</a>
+        <a href="https://nuessli-agasul.ch/images/AGB/AGB_Nuessli_AG.pdf" target="_blank" rel="noopener" class="hover:text-white transition-colors">AGB</a>
+      </div>
+    </div>
+    <div class="mt-10 pt-6 border-t border-white/10 text-xs text-white/50">
+      © Nüssli AG Agasul - Nüssli Ostschweiz AG Frauenfeld - Carreisen - Kranarbeiten - Transporte - Lastwagen-Reparaturen
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
