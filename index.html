@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Nüssli AG Agasul – Carreisen · Kran · Transporte · Werkstatt</title>
 <meta name="description" content="Nüssli AG Agasul – Familienbetrieb seit 1962. Carreisen, Kranarbeiten, Transporte und Werkstatt im Zürcher Oberland." />
-<link rel="icon" href="images/logo.jpg" />
+<link rel="icon" type="image/png" href="images/favicon_n.png" />
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,7 +79,7 @@ tailwind.config = {
 <header id="top" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between">
     <a href="#top" class="flex items-center">
-      <img src="images/logo.jpg" alt="Nüssli AG Carreisen und Transporte" class="h-11 w-auto" />
+      <img src="images/logo_trans.png" alt="Nüssli AG Carreisen und Transporte" class="h-12 w-auto" />
     </a>
     <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-navy">
       <a href="#carreisen" class="hover:text-signal transition-colors">Carreisen</a>
@@ -217,6 +217,11 @@ tailwind.config = {
         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-signal rounded-full"></span>ein 19-Plätzer Kleinbus</li>
       </ul>
       <p class="mt-5 text-slate-500 text-[15px] italic">Der 19-Plätzer Kleinbus eignet sich ideal für kleine Reisegesellschaften und Gruppen oder als Ergänzung zu einem unserer grossen Reisecars.</p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="https://nuessli-agasul.ch/index.php/carreisen/fahrzeuge" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-slate-300 hover:border-signal hover:text-signal text-navy font-head font-500 uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm transition-colors">Fahrzeuge</a>
+        <a href="https://nuessli-agasul.ch/index.php/carreisen/oldtimerreisen" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-slate-300 hover:border-signal hover:text-signal text-navy font-head font-500 uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm transition-colors">Oldtimerreisen</a>
+        <a href="https://nuessli-agasul.ch/index.php/carreisen" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-navy hover:bg-navy-700 text-white font-head font-600 uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm transition-colors">Zum Bereich Carreisen <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
@@ -236,7 +241,14 @@ tailwind.config = {
         <span class="border border-white/20 px-3 py-1.5 rounded-sm text-sm text-white/80">Palletgabel</span>
         <span class="border border-white/20 px-3 py-1.5 rounded-sm text-sm text-white/80">Betonkübel</span>
       </div>
-      <a href="https://nuessli-agasul.ch/images/spezialtransporte/technischer_Katalog_Nuessli_AG_2024.pdf" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 bg-signal hover:bg-signal-600 text-white font-head font-600 uppercase tracking-wider text-sm px-6 py-3 rounded-sm transition-colors">
+      <div class="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+        <a href="https://nuessli-agasul.ch/index.php/kran-und-greifer/mobilbaukran" target="_blank" rel="noopener" class="text-white/80 hover:text-steel transition-colors">Mobilbaukran ›</a>
+        <a href="https://nuessli-agasul.ch/index.php/kran-und-greifer/pneukran" target="_blank" rel="noopener" class="text-white/80 hover:text-steel transition-colors">Pneukran ›</a>
+        <a href="https://nuessli-agasul.ch/index.php/kran-und-greifer/greiferarbeiten" target="_blank" rel="noopener" class="text-white/80 hover:text-steel transition-colors">Greiferarbeiten ›</a>
+        <a href="https://nuessli-agasul.ch/index.php/kran-und-greifer/fahrzeuge" target="_blank" rel="noopener" class="text-white/80 hover:text-steel transition-colors">Fahrzeuge ›</a>
+        <a href="https://nuessli-agasul.ch/index.php/kran-und-greifer/ausgefuehrte-auftraege" target="_blank" rel="noopener" class="text-white/80 hover:text-steel transition-colors">ausgeführte Aufträge ›</a>
+      </div>
+      <a href="https://nuessli-agasul.ch/images/spezialtransporte/technischer_Katalog_Nuessli_AG_2024.pdf" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 bg-signal hover:bg-signal-600 text-white font-head font-600 uppercase tracking-wider text-sm px-6 py-3 rounded-sm transition-colors">
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm8 1.5V8h4.5L14 3.5z"/></svg>
         Technischer Katalog
       </a>
@@ -268,27 +280,27 @@ tailwind.config = {
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
       <div class="bg-white rounded-md p-6 shadow-sm hover:shadow-lg transition-shadow reveal">
         <h3 class="font-head font-600 uppercase text-navy text-lg tracking-wide">Spezialtransporte</h3>
-        <ul class="mt-4 space-y-2 text-slate-600 text-[15px]">
-          <li>Schwertransporte</li>
-          <li>Baumaschinentransporte</li>
-          <li>Baumaschinentaxi</li>
-          <li>Landmaschinentransporte</li>
+        <ul class="mt-4 space-y-1.5 text-[15px]">
+          <li><a href="https://nuessli-agasul.ch/index.php/transporte/spezialtransporte/schwertransporte" target="_blank" rel="noopener" class="flex items-center justify-between text-slate-600 hover:text-signal transition-colors">Schwertransporte <span class="text-slate-300">›</span></a></li>
+          <li><a href="https://nuessli-agasul.ch/index.php/transporte/spezialtransporte/baumaschinentransporte" target="_blank" rel="noopener" class="flex items-center justify-between text-slate-600 hover:text-signal transition-colors">Baumaschinentransporte <span class="text-slate-300">›</span></a></li>
+          <li><a href="https://nuessli-agasul.ch/index.php/transporte/spezialtransporte/baumaschinentaxi" target="_blank" rel="noopener" class="flex items-center justify-between text-slate-600 hover:text-signal transition-colors">Baumaschinentaxi <span class="text-slate-300">›</span></a></li>
+          <li><a href="https://nuessli-agasul.ch/index.php/transporte/spezialtransporte/landmaschinentransporte" target="_blank" rel="noopener" class="flex items-center justify-between text-slate-600 hover:text-signal transition-colors">Landmaschinentransporte <span class="text-slate-300">›</span></a></li>
         </ul>
       </div>
       <div class="bg-white rounded-md p-6 shadow-sm hover:shadow-lg transition-shadow reveal">
         <h3 class="font-head font-600 uppercase text-navy text-lg tracking-wide">Transporte</h3>
-        <ul class="mt-4 space-y-2 text-slate-600 text-[15px]">
-          <li>Sattelzug</li>
-          <li>Anhängerzug</li>
-          <li>Wechselpritschen</li>
+        <ul class="mt-4 space-y-1.5 text-[15px]">
+          <li><a href="https://nuessli-agasul.ch/index.php/transporte/transporte/sattelzug" target="_blank" rel="noopener" class="flex items-center justify-between text-slate-600 hover:text-signal transition-colors">Sattelzug <span class="text-slate-300">›</span></a></li>
+          <li><a href="https://nuessli-agasul.ch/index.php/transporte/transporte/anhaengerzug" target="_blank" rel="noopener" class="flex items-center justify-between text-slate-600 hover:text-signal transition-colors">Anhängerzug <span class="text-slate-300">›</span></a></li>
+          <li><a href="https://nuessli-agasul.ch/index.php/transporte/wechselpritschen" target="_blank" rel="noopener" class="flex items-center justify-between text-slate-600 hover:text-signal transition-colors">Wechselpritschen <span class="text-slate-300">›</span></a></li>
         </ul>
       </div>
       <div class="bg-white rounded-md p-6 shadow-sm hover:shadow-lg transition-shadow reveal">
         <h3 class="font-head font-600 uppercase text-navy text-lg tracking-wide">Baustellentransporte</h3>
-        <ul class="mt-4 space-y-2 text-slate-600 text-[15px]">
-          <li>Kippertransporte</li>
-          <li>Belagtransporte</li>
-          <li>Betontransporte</li>
+        <ul class="mt-4 space-y-1.5 text-[15px]">
+          <li><a href="https://nuessli-agasul.ch/index.php/transporte/baustellentransporte/kippertransporte" target="_blank" rel="noopener" class="flex items-center justify-between text-slate-600 hover:text-signal transition-colors">Kippertransporte <span class="text-slate-300">›</span></a></li>
+          <li><a href="https://nuessli-agasul.ch/index.php/transporte/baustellentransporte/belagtransporte" target="_blank" rel="noopener" class="flex items-center justify-between text-slate-600 hover:text-signal transition-colors">Belagtransporte <span class="text-slate-300">›</span></a></li>
+          <li><a href="https://nuessli-agasul.ch/index.php/transporte/baustellentransporte/betontransporte" target="_blank" rel="noopener" class="flex items-center justify-between text-slate-600 hover:text-signal transition-colors">Betontransporte <span class="text-slate-300">›</span></a></li>
         </ul>
       </div>
       <div class="bg-navy text-white rounded-md p-6 shadow-sm flex flex-col justify-between reveal">
@@ -319,6 +331,10 @@ tailwind.config = {
         <li class="flex items-start gap-3 text-slate-700"><span class="mt-1.5 w-2 h-2 bg-signal rounded-full shrink-0"></span>Bremsprüfung auf eigenem Prüfstand</li>
         <li class="flex items-start gap-3 text-slate-700"><span class="mt-1.5 w-2 h-2 bg-signal rounded-full shrink-0"></span>Gelenkspieltest auf eigenem Prüfstand</li>
       </ul>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="https://nuessli-agasul.ch/index.php/garage/projekte" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-slate-300 hover:border-signal hover:text-signal text-navy font-head font-500 uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm transition-colors">ausgeführte Arbeiten</a>
+        <a href="https://nuessli-agasul.ch/index.php/garage/engineering" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-slate-300 hover:border-signal hover:text-signal text-navy font-head font-500 uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm transition-colors">Engineering</a>
+      </div>
     </div>
     <div class="reveal">
       <div class="bg-mist rounded-md p-8 h-full flex flex-col justify-center border-l-4 border-signal">
@@ -350,6 +366,11 @@ tailwind.config = {
     <h2 class="mt-5 font-600 text-4xl sm:text-5xl uppercase leading-tight">In dritter Generation</h2>
     <p class="mt-8 text-white/85 text-lg leading-relaxed">Die Firma Nüssli wurde im Jahre 1962 durch Edwin Nüssli sen. als reiner Garagenbetrieb in Agasul gegründet. Bald wurde das Angebot um Transporte erweitert und das Unternehmen durch stetigen Wachstum vergrössert. Mit dem Kauf des ersten Reisecars wurde ein dritter Geschäftsbereich gegründet und die Firma in eine Aktiengesellschaft umgewandelt.</p>
     <p class="mt-5 text-white/85 text-lg leading-relaxed">Heute führt Edwin Nüssli jun. zusammen mit seiner Frau Doris Nüssli das Unternehmen in zweiter Generation, aber auch die dritte Generation ist bereits im Unternehmen aktiv. Bis heute ist die Firma Nüssli ein reiner Familienbetrieb geblieben, was uns einen persönlichen Kundenkontakt und eine einfache Zusammenarbeit ermöglicht.</p>
+    <div class="mt-9 flex flex-wrap justify-center gap-3">
+      <a href="https://nuessli-agasul.ch/index.php/ueber-uns/bildergalerie" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-head font-500 uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm transition-colors">Bildergalerie</a>
+      <a href="https://nuessli-agasul.ch/index.php/ueber-uns/oldtimersammlung" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-head font-500 uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm transition-colors">Oldtimersammlung</a>
+      <a href="https://nuessli-agasul.ch/index.php/ueber-uns/stellen" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-head font-500 uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm transition-colors">Stellenangebote</a>
+    </div>
   </div>
 </section>
 
@@ -416,7 +437,7 @@ tailwind.config = {
   <div class="max-w-7xl mx-auto px-5 py-14">
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
       <div>
-        <img src="images/logo.jpg" alt="Nüssli AG" class="h-10 w-auto bg-white rounded-sm p-1.5" />
+        <img src="images/logo_white.png" alt="Nüssli AG Carreisen und Transporte" class="h-11 w-auto" />
         <p class="mt-4 text-sm max-w-md leading-relaxed">Familienbetrieb seit 1962 – Carreisen, Kranarbeiten, Transporte und Werkstatt aus einer Hand.</p>
       </div>
       <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm">
