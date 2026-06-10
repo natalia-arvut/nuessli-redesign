@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Nüssli AG Agasul – Carreisen · Kran · Transporte · Werkstatt</title>
 <meta name="description" content="Nüssli AG Agasul – Familienbetrieb seit 1962. Carreisen, Kranarbeiten, Transporte und Werkstatt im Zürcher Oberland." />
-<link rel="icon" type="image/png" href="images/favicon_n.png" />
+<link rel="icon" type="image/png" href="images/favicon_pink.png" />
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@ tailwind.config = {
       colors: {
         navy:  { DEFAULT:'#0e2148', 700:'#16306b', 600:'#1b3a7e', 500:'#2b5cb0' },
         steel: '#2f6fd0',
-        signal:{ DEFAULT:'#d62828', 600:'#b81e1e' },
+        signal:{ DEFAULT:'#d6189e', 600:'#b01280' },
         ink:   '#0c1424',
         mist:  '#f4f6fb',
       },
@@ -35,7 +35,7 @@ tailwind.config = {
   h1,h2,h3,.font-head{font-family:'Oswald',sans-serif}
   .eyebrow{font-family:'Oswald',sans-serif;letter-spacing:.28em;text-transform:uppercase;font-weight:600}
   /* hazard stripe */
-  .hazard{background:repeating-linear-gradient(135deg,#d62828 0 14px,#0e2148 14px 28px)}
+  .hazard{background:repeating-linear-gradient(135deg,#d6189e 0 14px,#0e2148 14px 28px)}
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
   .card-img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
@@ -79,16 +79,16 @@ tailwind.config = {
 <header id="top" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between">
     <a href="#top" class="flex items-center">
-      <img src="images/logo_trans.png" alt="Nüssli AG Carreisen und Transporte" class="h-12 w-auto" />
+      <img src="images/logo.jpg" alt="Nüssli AG Carreisen und Transporte" class="h-12 w-auto" />
     </a>
     <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-navy">
-      <a href="#carreisen" class="hover:text-signal transition-colors">Carreisen</a>
-      <a href="#kran" class="hover:text-signal transition-colors">Kran</a>
-      <a href="#transporte" class="hover:text-signal transition-colors">Transporte</a>
-      <a href="#werkstatt" class="hover:text-signal transition-colors">Werkstatt</a>
-      <a href="#ueber-uns" class="hover:text-signal transition-colors">Über uns</a>
+      <a href="https://nuessli-agasul.ch/index.php/carreisen/carreisen" target="_blank" rel="noopener" class="hover:text-signal transition-colors">Carreisen</a>
+      <a href="https://nuessli-agasul.ch/index.php/kran-und-greifer" target="_blank" rel="noopener" class="hover:text-signal transition-colors">Kran</a>
+      <a href="https://nuessli-agasul.ch/index.php/transporte" target="_blank" rel="noopener" class="hover:text-signal transition-colors">Transporte</a>
+      <a href="https://nuessli-agasul.ch/index.php/garage/garage" target="_blank" rel="noopener" class="hover:text-signal transition-colors">Werkstatt</a>
+      <a href="https://nuessli-agasul.ch/index.php/ueber-uns/ueber-uns" target="_blank" rel="noopener" class="hover:text-signal transition-colors">Über uns</a>
     </nav>
-    <a href="#kontakt" class="inline-flex items-center gap-2 bg-signal hover:bg-signal-600 text-white font-head font-600 uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm transition-colors">
+    <a href="https://nuessli-agasul.ch/index.php/kontakt/kontakt" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-signal hover:bg-signal-600 text-white font-head font-600 uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm transition-colors">
       Kontakt
     </a>
   </div>
@@ -96,7 +96,7 @@ tailwind.config = {
 
 <!-- Hero -->
 <section class="relative min-h-[88vh] flex items-center overflow-hidden">
-  <img src="images/transport.jpg" alt="Schwertransport mit Scania und Kobelco-Bagger" class="absolute inset-0 w-full h-full object-cover" />
+  <img src="images/hero_car.jpg" alt="Nüssli Reisecar in den Schweizer Bergen mit Chalets im Hintergrund" class="absolute inset-0 w-full h-full object-cover" />
   <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/30"></div>
   <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
   <div class="relative max-w-7xl mx-auto px-5 py-24 w-full">
@@ -105,8 +105,9 @@ tailwind.config = {
         <span class="h-[3px] w-12 bg-signal"></span>
         <span class="eyebrow text-signal text-xs">Familienbetrieb seit 1962</span>
       </div>
-      <h1 class="text-white font-700 uppercase leading-[0.95] text-5xl sm:text-6xl lg:text-7xl tracking-tight">
-        Willkommen bei der<br><span class="text-steel">Firma Nüssli AG</span> Agasul
+      <h1 class="text-white font-700 uppercase leading-[1.15] text-5xl sm:text-6xl lg:text-7xl tracking-tight">
+        <span class="block">Willkommen bei der</span>
+        <span class="block text-steel mt-1">Firma Nüssli AG Agasul</span>
       </h1>
       <p class="mt-7 text-lg text-white/80 max-w-xl font-light leading-relaxed">
         Carreisen · Kranarbeiten · Transporte · Werkstatt – aus einer Hand. Ein reiner Familienbetrieb mit persönlichem Kundenkontakt im Zürcher Oberland.
@@ -158,7 +159,7 @@ tailwind.config = {
       <!-- Carreisen -->
       <a href="#carreisen" class="group block bg-white rounded-md overflow-hidden shadow-sm hover:shadow-xl transition-shadow reveal">
         <div class="relative h-60 overflow-hidden">
-          <img src="images/car.jpg" alt="Reisecar Setra im Wallis" class="card-img absolute inset-0 w-full h-full object-cover" />
+          <img src="images/pass_bus.jpg" alt="Nüssli Reisecar auf der Passstrasse in den Alpen" class="card-img absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent"></div>
           <span class="absolute left-5 bottom-4 text-white font-head font-600 text-2xl uppercase tracking-wide">Carreisen</span>
         </div>
@@ -199,7 +200,7 @@ tailwind.config = {
 <section id="carreisen" class="py-24 bg-white">
   <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
     <div class="reveal">
-      <img src="images/car.jpg" alt="Reisecar Setra S511 im Wallis" class="rounded-md shadow-lg w-full object-cover" />
+      <img src="images/pass_bus.jpg" alt="Nüssli Reisecar auf der Alpen-Passstrasse" class="rounded-md shadow-lg w-full object-cover" />
     </div>
     <div class="reveal">
       <span class="eyebrow text-signal text-xs">Carreisen</span>
@@ -358,7 +359,7 @@ tailwind.config = {
 
 <!-- Über uns -->
 <section id="ueber-uns" class="relative py-28 overflow-hidden">
-  <img src="images/car.jpg" alt="" class="absolute inset-0 w-full h-full object-cover scale-105 blur-[2px]" aria-hidden="true" />
+  <img src="images/hero_car.jpg" alt="" class="absolute inset-0 w-full h-full object-cover scale-105 blur-[2px]" aria-hidden="true" />
   <div class="absolute inset-0 bg-navy/95"></div>
   <div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/80 to-navy"></div>
   <div class="relative max-w-4xl mx-auto px-5 text-center text-white reveal">
@@ -437,7 +438,10 @@ tailwind.config = {
   <div class="max-w-7xl mx-auto px-5 py-14">
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
       <div>
-        <img src="images/logo_white.png" alt="Nüssli AG Carreisen und Transporte" class="h-11 w-auto" />
+        <div class="font-head font-700 uppercase text-3xl tracking-wide leading-none">
+          <span class="text-white">Nüssli</span><span class="text-signal"> AG</span>
+        </div>
+        <div class="mt-2 eyebrow text-[11px] text-white/45">Carreisen und Transporte</div>
         <p class="mt-4 text-sm max-w-md leading-relaxed">Familienbetrieb seit 1962 – Carreisen, Kranarbeiten, Transporte und Werkstatt aus einer Hand.</p>
       </div>
       <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm">
