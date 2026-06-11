@@ -66,7 +66,7 @@ tailwind.config = {
 
 <!-- Hero -->
 <section class="relative min-h-[88vh] flex items-center overflow-hidden">
-  <img src="images/hero_car.jpg" alt="Nüssli Reisecar in den Schweizer Bergen mit Chalets im Hintergrund" class="absolute inset-0 w-full h-full object-cover" />
+  <img src="images/hero_car.jpg" alt="Nüssli Reisecar auf einer Strasse in der Schweizer Landschaft" class="absolute inset-0 w-full h-full object-cover" style="object-position:72% center" />
   <div class="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/45 to-navy/10"></div>
   <div class="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-transparent"></div>
   <div class="relative max-w-7xl mx-auto px-5 py-24 w-full">
@@ -404,8 +404,11 @@ tailwind.config = {
 <div class="h-2 hazard"></div>
 
 <!-- Footer -->
-<footer class="bg-navy text-white/70">
-  <div class="max-w-7xl mx-auto px-5 py-14">
+<footer class="relative overflow-hidden text-white/70">
+  <img src="images/hero_car.jpg" alt="" class="absolute inset-0 w-full h-full object-cover scale-105 blur-[2px]" aria-hidden="true" />
+  <div class="absolute inset-0 bg-navy/95"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/80 to-navy"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-14">
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
       <div>
         <div class="font-head font-700 uppercase text-3xl tracking-wide leading-none">
